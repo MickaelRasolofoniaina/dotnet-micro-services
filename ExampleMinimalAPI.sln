@@ -7,13 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleMinimalAPI", "Exampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApi", "ToDoApi\ToDoApi.csproj", "{F3BBDCED-788B-47FD-A6B3-411687E5677B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{05CAD255-6E50-4408-8B21-B7A1E965A359}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{82757EC2-8A41-4263-8CB9-DB0105F09EF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogAPI", "Services\Catalog\CatalogAPI\CatalogAPI.csproj", "{7AB2739D-7516-4E9F-B676-9B08E5CDE89B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{24FDB48F-34A7-4450-8B04-16B2B3ECA064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +27,16 @@ Global
 		{F3BBDCED-788B-47FD-A6B3-411687E5677B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3BBDCED-788B-47FD-A6B3-411687E5677B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3BBDCED-788B-47FD-A6B3-411687E5677B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB2739D-7516-4E9F-B676-9B08E5CDE89B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB2739D-7516-4E9F-B676-9B08E5CDE89B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB2739D-7516-4E9F-B676-9B08E5CDE89B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB2739D-7516-4E9F-B676-9B08E5CDE89B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82757EC2-8A41-4263-8CB9-DB0105F09EF9} = {05CAD255-6E50-4408-8B21-B7A1E965A359}
+		{7AB2739D-7516-4E9F-B676-9B08E5CDE89B} = {82757EC2-8A41-4263-8CB9-DB0105F09EF9}
 	EndGlobalSection
 EndGlobal
