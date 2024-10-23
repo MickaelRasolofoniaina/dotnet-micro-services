@@ -6,6 +6,10 @@ builder.Services.AddMediatR(config =>
 {
     config.RegisterServicesFromAssembly(typeof(Program).Assembly);
 });
+builder.Services.AddMarten(opts => 
+{
+    opts.Connection(builder.Configuration.GetConnectionString("Database")!);
+}).UseLightweightSessions();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c => 
