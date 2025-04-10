@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0+cvPz02E7w=",
+  "dgSpecHash": "j3bFti6y010PVM0noz8PAVrzc2inFckYReqc2lZBnyYymjlq2XohT3lh4Hm/FAFa37eYJicVsFWW9g7fRpIrrw==",
   "success": true,
   "projectFilePath": "/Users/mickael/Dev/dotnet-micro-services/ToDoApi/ToDoApi.csproj",
   "expectedPackageFiles": [
@@ -15,10 +15,7 @@
     "/Users/mickael/.nuget/packages/microsoft.extensions.logging/8.0.1/microsoft.extensions.logging.8.0.1.nupkg.sha512",
     "/Users/mickael/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.2/microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
     "/Users/mickael/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
-    "/Users/mickael/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "/Users/mickael/.nuget/packages/microsoft.netcore.app.ref/8.0.14/microsoft.netcore.app.ref.8.0.14.nupkg.sha512",
-    "/Users/mickael/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.14/microsoft.aspnetcore.app.ref.8.0.14.nupkg.sha512",
-    "/Users/mickael/.nuget/packages/microsoft.netcore.app.host.osx-x64/8.0.14/microsoft.netcore.app.host.osx-x64.8.0.14.nupkg.sha512"
+    "/Users/mickael/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }
