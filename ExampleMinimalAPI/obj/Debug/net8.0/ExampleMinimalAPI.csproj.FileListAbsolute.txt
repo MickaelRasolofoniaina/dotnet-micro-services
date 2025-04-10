@@ -31,3 +31,4 @@
 /Users/mickael/Dev/dotnet-micro-services/ExampleMinimalAPI/obj/Debug/net8.0/ExampleMinimalAPI.pdb
 /Users/mickael/Dev/dotnet-micro-services/ExampleMinimalAPI/obj/Debug/net8.0/ExampleMinimalAPI.genruntimeconfig.cache
 /Users/mickael/Dev/dotnet-micro-services/ExampleMinimalAPI/obj/Debug/net8.0/ref/ExampleMinimalAPI.dll
+/Users/mickael/Dev/dotnet-micro-services/ExampleMinimalAPI/obj/Debug/net8.0/ExampleMinimalAPI.sourcelink.json
