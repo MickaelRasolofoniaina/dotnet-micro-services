@@ -7,14 +7,8 @@ internal class CreateProductCommandHandler(IDocumentSession documentSession) : I
 {
     public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
-        var product = new Product()
-        {
-            Name = command.Name,
-            Category = command.Category,
-            Description = command.Description,
-            ImageFile = command.ImageFile,
-            Price = command.Price
-        };
+        var product = command.Adapt<Product>();
+        product.Id = Guid.NewGuid();
 
         documentSession.Store(product);
         await documentSession.SaveChangesAsync(cancellationToken);
