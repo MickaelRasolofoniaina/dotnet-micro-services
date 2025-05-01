@@ -10,16 +10,8 @@ internal class DeleteProductCommandHandler(IDocumentSession documentSession) : I
     {
         documentSession.Delete<Product>(command.Id);
         
-        try
-        {
-            await documentSession.SaveChangesAsync(cancellationToken);
+        await documentSession.SaveChangesAsync(cancellationToken);
 
-            return new DeleteProductResult(true);
-        }
-        catch
-        {
-            // Log the exception if needed
-            return new DeleteProductResult(false);
-        }
+        return new DeleteProductResult(true);
     }
 }

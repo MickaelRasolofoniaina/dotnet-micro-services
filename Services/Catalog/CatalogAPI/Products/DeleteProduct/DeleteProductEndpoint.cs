@@ -16,7 +16,7 @@ public class DeleteProductEndpoint : ICarterModule
 
             var response = result.Adapt<DeleteProductResponse>();
 
-            return Results.Ok(response);
+            return Results.NoContent();
         });
     }
 }
