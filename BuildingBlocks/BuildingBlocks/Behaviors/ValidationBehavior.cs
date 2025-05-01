@@ -18,7 +18,7 @@ public class ValidationBehavior<TRequest, TResponse>(IEnumerable<IValidator<TReq
 
         if (failures.Count != 0)
         {
-            throw new ValidationException(failures);
+            throw new ValidationException(string.Join(" \n ", failures.Select(f => f.ErrorMessage)), failures);
         }
 
         return await next();
