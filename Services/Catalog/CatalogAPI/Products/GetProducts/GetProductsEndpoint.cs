@@ -18,7 +18,7 @@ public class GetProductEndpoint : ICarterModule
         })
         .WithName("GetProducts")
         .Produces<GetProductsResponse[]>(StatusCodes.Status200OK)
-        .ProducesProblem(StatusCodes.Status404NotFound)
+        .ProducesProblem(StatusCodes.Status500InternalServerError)
         .WithSummary("Get products list")
         .WithDescription("Get all products in the catalog");
     }

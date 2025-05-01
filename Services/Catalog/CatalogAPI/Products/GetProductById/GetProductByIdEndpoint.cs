@@ -10,7 +10,7 @@ public class GetProductByIdEndpoint : ICarterModule
     {
         app.MapGet("/products/{id:guid}", async (Guid id, ISender sender) =>
         {
-            try 
+            try
             {
                 var request = new GetProductByIdRequest(id);
 
@@ -22,14 +22,15 @@ public class GetProductByIdEndpoint : ICarterModule
 
                 return Results.Ok(response);
             }
-            catch(ProductNotFoundException ex) 
-            {                
+            catch (ProductNotFoundException ex)
+            {
                 return Results.NotFound(new { ex.Message });
             }
         })
         .WithName("GetProductById")
         .Produces<GetProductByIdResponse>(StatusCodes.Status200OK)
         .ProducesProblem(StatusCodes.Status404NotFound)
+        .ProducesProblem(StatusCodes.Status500InternalServerError)
         .WithSummary("Get a product by id")
         .WithDescription("Get a product by id from the catalog");
     }

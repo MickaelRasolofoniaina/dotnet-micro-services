@@ -9,26 +9,21 @@ public class UpdateProductEndpoint : ICarterModule
     {
         app.MapPut("/products", async (UpdateProductRequest request, ISender sender) =>
         {
-            try 
-            {
-                var command = request.Adapt<UpdateProductCommand>();
-                
-                var result = await sender.Send(command);
 
-                var response = result.Adapt<UpdateProductResponse>();
-                
-                return Results.NoContent();
-            }
-            catch(ProductNotFoundException ex)
-            {
-                return Results.NotFound(new { ex.Message });
-            }
+            var command = request.Adapt<UpdateProductCommand>();
 
+            var result = await sender.Send(command);
+
+            var response = result.Adapt<UpdateProductResponse>();
+
+            return Results.NoContent();
         })
         .WithName("UpdateProduct")
-        .Produces<UpdateProductResponse>(StatusCodes.Status200OK)
+        .Produces<UpdateProductResponse>(StatusCodes.Status204NoContent)
         .ProducesProblem(StatusCodes.Status404NotFound)
+        .ProducesProblem(StatusCodes.Status400BadRequest)
+        .ProducesProblem(StatusCodes.Status500InternalServerError)
         .WithSummary("Update a product by id")
-        .WithDescription("Update a product by id from the catalog");;
+        .WithDescription("Update a product by id from the catalog"); ;
     }
 }

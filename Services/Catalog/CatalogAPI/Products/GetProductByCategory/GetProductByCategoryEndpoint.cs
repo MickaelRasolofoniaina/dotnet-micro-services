@@ -13,7 +13,7 @@ public class GetProductByCategoryEndpoint : ICarterModule
             var request = new GetProductByCategoryRequest(category);
 
             var query = request.Adapt<GetProductByCategoryQuery>();
-            
+
             var result = await sender.Send(query);
 
             var response = result.Adapt<GetProductByCategoryResponse>();
@@ -22,7 +22,7 @@ public class GetProductByCategoryEndpoint : ICarterModule
         })
         .WithName("GetProductByCategory")
         .Produces<GetProductByCategoryResponse>(StatusCodes.Status200OK)
-        .ProducesProblem(StatusCodes.Status404NotFound)
+        .ProducesProblem(StatusCodes.Status500InternalServerError)
         .WithSummary("Get products by category")
         .WithDescription("Get all products in the catalog by category");
     }
