@@ -4,13 +4,16 @@
 using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace BuildingBlocks.Exceptions.Handler;
 
-public class ExceptionHandler : Microsoft.AspNetCore.Diagnostics.IExceptionHandler
+public class ExceptionHandler(ILogger<ExceptionHandler> logger) : Microsoft.AspNetCore.Diagnostics.IExceptionHandler
 {
     public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
     {
+        logger.LogError(exception, "An unhandled exception occurred: {Message}", exception.Message);
+
         (string Message, string Title, int StatusCode) = exception switch
         {
             ValidationException => (exception.Message, "Validation Error", StatusCodes.Status400BadRequest),
