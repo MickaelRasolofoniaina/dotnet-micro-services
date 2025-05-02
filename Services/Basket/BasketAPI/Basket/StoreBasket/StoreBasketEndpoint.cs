@@ -15,9 +15,10 @@ public class StoreBasketEndpoint : ICarterModule
 
             var response = result.Adapt<StoreBasketResponse>();
 
-            return Results.Ok(response);
+            return Results.Created($"/basket/{response.UserName}", response);
         })
         .WithName("StoreBasket")
+        .Produces<StoreBasketResponse>(StatusCodes.Status201Created)
         .Produces<StoreBasketResponse>(StatusCodes.Status200OK)
         .ProducesProblem(StatusCodes.Status400BadRequest)
         .ProducesProblem(StatusCodes.Status500InternalServerError)

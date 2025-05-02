@@ -20,6 +20,8 @@ builder.Services.AddMarten(opts =>
 builder.Services.AddValidatorsFromAssembly(assembly);
 builder.Services.AddExceptionHandler<ExceptionHandler>();
 
+builder.Services.AddScoped<IBasketRepository, BasketRepository>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -37,7 +39,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Catalog API V1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Basket API V1");
         c.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
     });
 }
