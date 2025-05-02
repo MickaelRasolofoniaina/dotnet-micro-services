@@ -9,7 +9,7 @@ An example of microservice implementation in .NET
 - Fluent Validation: https://docs.fluentvalidation.net/en/latest/
 - Scrutor: https://github.com/khellang/Scrutor
 
-# Pattern
+# Design Patterns
 - Repository Pattern
 - CQRS
 - Cache Aside Pattern
