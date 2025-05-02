@@ -16,14 +16,14 @@ public class DeleteProductEndpoint : ICarterModule
 
             var response = result.Adapt<DeleteProductResponse>();
 
-            return Results.NoContent();
+            return Results.Ok(response);
         })
         .WithName("DeleteProduct")
-        .Produces<DeleteProductResponse>(StatusCodes.Status204NoContent)
+        .Produces<DeleteProductResponse>(StatusCodes.Status200OK)
         .ProducesProblem(StatusCodes.Status404NotFound)
         .ProducesProblem(StatusCodes.Status400BadRequest)
         .ProducesProblem(StatusCodes.Status500InternalServerError)
-        .WithSummary("Get a product by id")
-        .WithDescription("Get a product by id from the catalog"); ;
+        .WithSummary("Delete a product by id")
+        .WithDescription("Delete a product by id from the catalog");
     }
 }

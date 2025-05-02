@@ -16,14 +16,14 @@ public class UpdateProductEndpoint : ICarterModule
 
             var response = result.Adapt<UpdateProductResponse>();
 
-            return Results.NoContent();
+            return Results.Ok(response);
         })
         .WithName("UpdateProduct")
-        .Produces<UpdateProductResponse>(StatusCodes.Status204NoContent)
+        .Produces<UpdateProductResponse>(StatusCodes.Status200OK)
         .ProducesProblem(StatusCodes.Status404NotFound)
         .ProducesProblem(StatusCodes.Status400BadRequest)
         .ProducesProblem(StatusCodes.Status500InternalServerError)
         .WithSummary("Update a product by id")
-        .WithDescription("Update a product by id from the catalog"); ;
+        .WithDescription("Update a product by id from the catalog");
     }
 }
