@@ -1,5 +1,8 @@
-# What?
+# Purpose
 An example of microservice implementation in .NET
+
+# Architectures
+- Vertical Slice Architecture
 
 # Libraries
 - Marten: https://martendb.io/introduction.html 
