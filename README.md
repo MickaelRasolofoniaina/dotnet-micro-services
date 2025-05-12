@@ -3,9 +3,11 @@ An example of microservice implementation in .NET
 
 # Architectures
 - Vertical Slice Architecture
+- N Layer Architecture
 
 # Frameworks
 - gRPC
+- Entity Framework
 
 # Libraries
 - Marten: https://martendb.io/introduction.html 
