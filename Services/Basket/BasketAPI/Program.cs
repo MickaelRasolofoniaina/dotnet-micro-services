@@ -32,6 +32,11 @@ builder.Services.AddStackExchangeRedisCache(options =>
     options.InstanceName = "basket";
 });
 
+builder.Services.AddGrpcClient<DiscountAPI.DiscountProtoService.DiscountProtoServiceClient>(options =>
+{
+    options.Address = new Uri(builder.Configuration["GrpcSettings:DiscountUrl"]!);
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {

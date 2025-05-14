@@ -54,7 +54,7 @@ public class DiscountService(DiscountContext discountContext) : DiscountProtoSer
         var coupon = await discountContext.Coupons.FirstOrDefaultAsync(x => x.Id == request.Id) ?? throw new RpcException(new Status(StatusCode.NotFound, $"Discount with Id={request.Id} is not found"));
 
         discountContext.Coupons.Remove(coupon);
-        discountContext.SaveChanges();
+        await discountContext.SaveChangesAsync();
 
         var result = new DeleteDiscountResponse
         {
