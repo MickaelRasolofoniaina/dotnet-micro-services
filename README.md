@@ -1,9 +1,10 @@
-# Purpose
+# Overview
 An example of microservice implementation in .NET
 
 # Architectures
 - Vertical Slice Architecture
 - N Layer Architecture
+- Clean Architecture
 
 # Frameworks
 - gRPC
@@ -19,7 +20,15 @@ An example of microservice implementation in .NET
 
 # Design Patterns
 - Repository Pattern
-- CQRS
 - Cache Aside Pattern
 - Proxy Pattern
 - Decorator Pattern
+
+# Design Principles
+- CQRS
+- DDD
+- SOLID
+- KISS
+- YAGNI
+- SoC
+- DIP
