@@ -5,12 +5,12 @@ using OrderingInfrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
-    .AddApplication()
-    .AddInfrastructure(builder.Configuration)
-    .AddServices();
+    .AddApplicationServices()
+    .AddInfrastructureServices(builder.Configuration)
+    .AddApiServices();
 
 var app = builder.Build();
 
-app.UseServices();
+app.UseApiServices();
 
 app.Run();
