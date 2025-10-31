@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace OrderingInfrastructure.Data.Configurations;
@@ -96,7 +95,6 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
             payment.Property(p => p.PaymentMethod)
                 .IsRequired();
         });
-
 
         builder.HasMany(o => o.OrderItems)
             .WithOne()
