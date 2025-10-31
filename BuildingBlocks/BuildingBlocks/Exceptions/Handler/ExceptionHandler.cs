@@ -1,6 +1,3 @@
-
-
-
 using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -35,13 +32,14 @@ public class ExceptionHandler(ILogger<ExceptionHandler> logger) : Microsoft.AspN
 
         problemDetails.Extensions.Add("traceId", httpContext.TraceIdentifier);
 
-        if(exception is ValidationException validationException)
+        if (exception is ValidationException validationException)
         {
             problemDetails.Extensions.Add("validationErrors", validationException.Errors);
         }
 
         httpContext.Response.StatusCode = StatusCode;
         httpContext.Response.ContentType = "application/problem+json";
+
         await httpContext.Response.WriteAsJsonAsync(problemDetails, cancellationToken: cancellationToken);
 
         return true;

@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mickael/Dev/dotnet-micro-services/ExampleMinimalAPI/ExampleMinimalAPI.csproj": {}
+    "C:\\Asa\\Lab\\Microservice\\dotnet-micro-services\\ExampleMinimalAPI\\ExampleMinimalAPI.csproj": {}
   },
   "projects": {
-    "/Users/mickael/Dev/dotnet-micro-services/ExampleMinimalAPI/ExampleMinimalAPI.csproj": {
+    "C:\\Asa\\Lab\\Microservice\\dotnet-micro-services\\ExampleMinimalAPI\\ExampleMinimalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Dev/dotnet-micro-services/ExampleMinimalAPI/ExampleMinimalAPI.csproj",
+        "projectUniqueName": "C:\\Asa\\Lab\\Microservice\\dotnet-micro-services\\ExampleMinimalAPI\\ExampleMinimalAPI.csproj",
         "projectName": "ExampleMinimalAPI",
-        "projectPath": "/Users/mickael/Dev/dotnet-micro-services/ExampleMinimalAPI/ExampleMinimalAPI.csproj",
-        "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Dev/dotnet-micro-services/ExampleMinimalAPI/obj/",
+        "projectPath": "C:\\Asa\\Lab\\Microservice\\dotnet-micro-services\\ExampleMinimalAPI\\ExampleMinimalAPI.csproj",
+        "packagesPath": "C:\\Users\\Mickael\\.nuget\\packages\\",
+        "outputPath": "C:\\Asa\\Lab\\Microservice\\dotnet-micro-services\\ExampleMinimalAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Mickael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,7 +44,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -71,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
