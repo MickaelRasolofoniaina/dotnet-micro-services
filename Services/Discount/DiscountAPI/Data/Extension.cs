@@ -9,7 +9,9 @@ public static class Extension
         using (var scope = app.ApplicationServices.CreateScope())
         {
             var services = scope.ServiceProvider;
+
             using var context = services.GetRequiredService<DiscountContext>();
+
             context.Database.MigrateAsync();
         }
 
