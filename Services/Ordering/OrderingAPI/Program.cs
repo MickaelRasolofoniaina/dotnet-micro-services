@@ -15,7 +15,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
     {
-        Title = "Catalog API",
+        Title = "Ordering API",
         Version = "v1"
     });
 });
